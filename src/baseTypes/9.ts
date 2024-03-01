@@ -6,18 +6,22 @@ type Page = {
   likes: number;
   accounts: string[];
   status: "open" | "close";
-};
-
-type Details = {
-  details: {
+  details?: {
     createAt: Date;
     updateAt: Date;
   };
 };
 
-type DetailedPage = Page & Details;
+// type Details = {
+//   details: {
+//     createAt: Date;
+//     updateAt: Date;
+//   };
+// };
 
-const page1: DetailedPage = {
+// type DetailedPage = Page & Details;
+
+const page1: Page = {
   title: "The awesome page",
   likes: 100,
   accounts: ["Max", "Anton", "Nikita"],
